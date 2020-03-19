@@ -66,7 +66,7 @@ def toys_update(request, toy_id):
     form = ToyForm(request.POST or None, instance = toy)
     if form.is_valid():
         upd_toy = form.save()
-        return redirect('toys_detail', toy_id=toy_id)
+        return redirect('toys_index')
     else:
         form = ToyForm()
     context = { 'form': form }
