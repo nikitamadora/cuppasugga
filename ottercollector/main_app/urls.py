@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # ---------- otter routes
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('otters/', views.otters_index, name='index'),
@@ -16,4 +17,6 @@ urlpatterns = [
     path('toys/create/', views.toys_create, name='toys_create'),
     path('toys/<int:toy_id>/toys_update/', views.toys_update, name='toys_update'),
     path('toys/<int:toy_id>/toys_delete/', views.toys_delete, name='toys_delete'),
+    # ---------- user routes
+    path('accounts/signup', views.signup, name='signup'),
 ]

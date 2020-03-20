@@ -119,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# specify where successful logins should redirect to
+LOGIN_REDIRECT_URL = '/otters/'
+
+# specify where logging out redirects to
+LOGOUT_REDIRECT_URL = '/'
