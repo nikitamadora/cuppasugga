@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Available Bags</h1>
+
+{% for otter in otters %}
+  <div class="card">
+    <a href="{% url 'detail' otter.id %}">
+      <div class="card-content">
+        <span class="card-title">{{ otter.name }} 🦦</span>
+        <p>Species: {{ otter.species }}</p>
+        <p>Description: {{ otter.description }}</p>
+        {% if otter.age > 0 %}
+          <p>Age: {{ otter.age }}</p>
+        {% else %}
+          <p>Age: Pup</p>
+        {% endif %}
+      </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
