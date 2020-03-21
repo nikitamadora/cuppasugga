@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models import CharField
+from django_mysql.models import ListCharField
 from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
@@ -13,22 +15,28 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    location = models.CharField(max_length=30, blank=True)
+    location = models.CharField(max_length=30)
     bio = models.TextField(max_length=500, blank=True)
     # If True, the field is allowed to be blank. Default is False
 
+# User profile can have one bag (MVP) --> can expand to many later
 class Bag(models.Model):
-    item = models.CharField(max_length=50)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # item = models.CharField(max_length=50)
+    profile = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = ListCharField(
+        name = models.CharField(max_length=50),
+        description = models.TextField(max_length=200),
+        quantity = models.PositiveSmallIntegerField()
+    )
     
-class Item(models.Model):
-    name = models.CharField(max_length=50)
-    description = models.TextField(max_length=200)
-    quantity = models.PositiveSmallIntegerField()
-    # bag = models.ForeignKey(Bag, on_delete=models.CASCADE)
+# class Item(models.Model):
+#     name = models.CharField(max_length=50)
+#     description = models.TextField(max_length=200)
+#     quantity = models.PositiveSmallIntegerField()
+#     bag = models.ForeignKey(Bag, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 # class Toy(models.Model):
 #     name = models.CharField(max_length=50)
