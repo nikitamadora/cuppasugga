@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": ".env/bin/python3.7",
+    "python.pythonPath": "/Users/kuri.carino/sei/projects/Project-2-Collab-Cuppa-Sugga/.env/bin/python3.7",
     "emmet.includeLanguages": {"django-html": "html"}
 }
