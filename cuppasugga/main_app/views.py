@@ -102,17 +102,17 @@ def add_item(request, bag_id):
 #     return render(request, 'main_app/toy_form.html', context)
 
 # @login_required
-# def toys_update(request, toy_id):
-#     toy = Toy.objects.get(id=toy_id)
-#     if request.method == 'POST':
-#         form = ToyForm(request.POST, instance=toy)
-#         if form.is_valid():
-#             toy = form.save()
-#             return redirect('toys_index')
-#     else:
-#         form = ToyForm(instance=toy)
-#     context = { 'form': form }
-#     return render(request, 'main_app/toy_form.html', context)
+def toys_update(request, toy_id):
+    toy = Toy.objects.get(id=toy_id)
+    if request.method == 'POST':
+        form = ToyForm(request.POST, instance=toy)
+        if form.is_valid():
+            toy = form.save()
+            return redirect('toys_index')
+    else:
+        form = ToyForm(instance=toy)
+    context = { 'form': form }
+    return render(request, 'main_app/toy_form.html', context)
 
 # @login_required
 # def toys_delete(request, toy_id):
