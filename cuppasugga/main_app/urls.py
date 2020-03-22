@@ -12,7 +12,7 @@ urlpatterns = [
 
     # ------------- profile routes
     path('profile/', views.profile, name='profile'),
-    path('profile/<int:profile_id>/bags/<int:bag_id>/', views.profile_bag_detail, name='profile_bag_detail'),
+    path('profile/<int:user_id>/bags/<int:bag_id>/', views.profile_bag_detail, name='profile_bag_detail'),
     # path('profile/<int:profile_id>/bags/new/')
 
     # path('otters/<int:otter_id>/assoc_toy/<int:toy_id>/', views.assoc_toy, name='assoc_toy'),
