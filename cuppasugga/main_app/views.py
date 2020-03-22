@@ -60,7 +60,7 @@ def profile(request, profile_id):
     bags = Bag.objects.get(id=profile_id)
     return render(request, 'main_app/profile.html', {'bags': bags})
 
-def profile_bag_detail(request, bag_id):
+def profile_bag_detail(request, user_id, bag_id):
     bag=Bag.objects.get(id=bag_id)
     return render(request, 'main_app/bag_detail.html', {'bag': bag}) 
 
