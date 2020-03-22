@@ -1,6 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 id="custom-welcome">Welcome to Cuppa Sugga</h1>
-    <h2>lend me some sugar, i am your neighbor</h2>
+
+  <!-- Main -->
+  <main class="section">
+    <div class="columns">
+      <!-- Bag on Left -->
+      <div class="column">
+        <div id="bag-image">
+          <img src="https://i.ibb.co/31vf4CG/thisisabag.png" alt="">
+        </div>
+      </div>
+      <!-- Text/Buttons on Right -->
+      <div class="column">
+        <div id="recipient-hook">
+          <p>Need a little something from a neighbor?</p>
+          <button class="button is-danger is-small">See Available Donations</button>
+        </div>
+        <div id="donor-hook">
+          <p>Have a little extra to share with a neighbor?</p>
+          <button>Login to Donate a Bag</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
 {% endblock content %}

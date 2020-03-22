@@ -1,0 +1,30 @@
+#bag-image {
+  background-image:https://i.ibb.co/31vf4CG/thisisabag.png;
+  text-align: right;
+}
+
+#main-hook {
+  align-content: space-between;
+}
+
+#recipient-hook {
+  background-color: pink;
+  margin: 0 0 30px 0;
+  border-radius: 20px;
+  text-align: center;
+  height: 135px;
+  width: 300px;
+}
+
+#donor-hook {
+  background-color: pink;
+  margin: 0 0 50px 0;
+  border-radius: 20px;
+  text-align: center;
+  height: 135px;
+  width: 300px;
+}
+
+#all-donations-button {
+  /* margin: 0, 0, 5px, 0; */
+}
