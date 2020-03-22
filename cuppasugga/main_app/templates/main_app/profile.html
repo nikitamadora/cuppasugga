@@ -11,6 +11,10 @@
                 <span class="card-title"></span>
                 <p>{{ bag.content }}</p>
             </div>
+            <div class="card-action">
+                <a href="{% url 'bags_update' user.id bag.id %}">Edit</a>
+                {% comment %} <a href="{% url 'toys_delete' toy.id %}">Delete</a> {% endcomment %}
+            </div>
         </div>
     </a>
     {% empty %}

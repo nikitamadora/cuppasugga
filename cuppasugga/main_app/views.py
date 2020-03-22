@@ -67,6 +67,24 @@ def profile_bag_detail(request, user_id, bag_id):
     return render(request, 'main_app/bag_detail.html', {'bag': bag}) 
 
 # @login_required
+def bags_update(request, user_id, bag_id):
+    user_id = User.objects.get(id=user_id)
+    bag = Bag.objects.get(id=bag_id)
+    return render(request, 'main_app/update_bag_form.html')
+    # if request.method == 'POST':
+    #     form = BagForm(request.POST, instance=bag)
+    #     if form.is_valid():
+    #         bag = form.save()
+    #         return render('main_app/update_bag_form.html', {'bag': bag})
+    # else:
+    #     return redirect('public_index')
+    #     form = BagForm(instance=bag)
+    # context = { 'form': form }
+    # return render(request, 'main_app/toy_form.html', context)
+
+
+
+# @login_required
 # def add_item(request, bag_id):
 #     form = ItemForm(request.POST)
 #     if form.is_valid():
