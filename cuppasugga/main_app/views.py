@@ -7,19 +7,19 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 # user signup view
-# def signup(request):
-#     error_message=''
-#     if request.method == 'POST':
-#         form = UserCreationForm(request.POST)
-#         if form.is_valid():
-#             user = form.save()
-#             login(request, user)
-#             return redirect('index')
-#         else:
-#             error_message = 'Invalid sign up - try again'
-#     form = UserCreationForm()
-#     context = { 'form': form, 'error_message': error_message }
-#     return render(request, 'registration/signup.html', context )
+def signup(request):
+    error_message=''
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('public_index')
+        else:
+            error_message = 'Invalid sign up - try again'
+    form = UserCreationForm()
+    context = { 'form': form, 'error_message': error_message }
+    return render(request, 'registration/signup.html', context )
 
 # Landing Page
 def home(request):
@@ -53,6 +53,16 @@ def new_bag(request):
 def public_bag_detail(request, bag_id):
     bag = Bag.objects.get(id=bag_id)
     return render(request, 'bags/public_detail.html', { 'bag' : bag })
+
+
+###### PROFILE VIEWS
+def profile(request, profile_id):
+    bags = Bag.objects.get(id=profile_id)
+    return render(request, 'main_app/profile.html', {'bags': bags})
+
+def profile_bag_detail(request, bag_id):
+    bag=Bag.objects.get(id=bag_id)
+    return render(request, 'main_app/bag_detail.html', {'bag': bag}) 
 
 # @login_required
 # def add_item(request, bag_id):
