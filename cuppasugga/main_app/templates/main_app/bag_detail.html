@@ -7,13 +7,13 @@
     <div class="col s6 col-offset-3">
         <div class="card">
             <div class="card-content">
-                <span class="card-title">{{ toy.name }}</span>
-                <p>Color: {{ toy.color }}</p>
+                <span class="card-title"></span>
+                <p>Color: {{ bag.content }}</p>
             </div>
-            <div class="card-action">
+            {% comment %} <div class="card-action">
                 <a href="{% url 'toys_update' toy.id %}">Edit</a>
                 <a href="{% url 'toys_delete' toy.id %}">Delete</a>
-            </div>
+            </div> {% endcomment %}
         </div>
     </div>
 </div>
