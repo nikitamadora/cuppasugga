@@ -7,6 +7,11 @@ font-family: 'Gamja Flower', cursive; */
   text-align: right;
 }
 
+#bag-image:hover {
+  -webkit-animation: rotate-scale-up-diag-2 0.7s linear both;
+	        animation: rotate-scale-up-diag-2 0.7s linear both;
+}
+
 /* Container div for the hooks */
 #main-hooks {
   width: 300px;
@@ -14,7 +19,8 @@ font-family: 'Gamja Flower', cursive; */
 }
 
 #recipient-hook {
-  background-color: pink;
+  background: rgb(255,160,233);
+  background: linear-gradient(29deg, rgba(255,160,233,1) 0%, rgba(149,216,238,1) 82%);
   margin: 0 0 30px 0;
   border-radius: 20px;
   text-align: center;
@@ -22,18 +28,31 @@ font-family: 'Gamja Flower', cursive; */
   padding: 1rem;
 }
 
+#recipient-hook:hover {
+  -webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 #hook-login-btn{
   margin: 10px 0 0 0;
 }
 
 #donor-hook {
-  background-color: pink;
+  background: rgb(255,160,233);
+  background: linear-gradient(260deg, rgba(255,160,233,1) 0%, rgba(149,216,238,1) 82%);
   margin: 0 0 50px 0;
   border-radius: 20px;
   text-align: center;
   height: 135px;
   padding: 1rem;
 }
+
+#donor-hook:hover {
+  background: rgb(255,160,233);
+  background: linear-gradient(260deg, rgba(255,160,233,1) 0%, rgba(149,216,238,.6) 82%);
+}
+
+
 
 @media screen and (max-width: 768px) {
   #main-hooks {
@@ -48,12 +67,31 @@ font-family: 'Gamja Flower', cursive; */
   /* ends small screen media breakpoint */
 }
 
+.center-horizontal {
+  margin: 0 auto;
+}
+
 
 /* ------------------------------------------- ANIMATIONS --------- */
 
 .rotate-scale-up-diag-2 {
 	-webkit-animation: rotate-scale-up-diag-2 0.7s linear both;
 	        animation: rotate-scale-up-diag-2 0.7s linear both;
+}
+
+.rotate-scale-down {
+	-webkit-animation: rotate-scale-down 0.65s linear both;
+	        animation: rotate-scale-down 0.65s linear both;
+}
+
+.rotate-center {
+	-webkit-animation: rotate-center 0.6s ease-in-out both;
+	        animation: rotate-center 0.6s ease-in-out both;
+}
+
+.slide-fwd-center {
+	-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 /* ----------------------------------------------
@@ -94,5 +132,91 @@ font-family: 'Gamja Flower', cursive; */
   100% {
     -webkit-transform: scale(1) rotate3d(-1, 1, 0, 360deg);
             transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-scale-down
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+            transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-down {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+            transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateZ(180deg);
+            transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+            transform: scale(1) rotateZ(360deg);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-fwd-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
   }
 }
