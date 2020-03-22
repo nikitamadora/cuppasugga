@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Profile, Bag
+from .models import User, Profile, Bag
 from .forms import BagForm
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -33,13 +33,13 @@ def public_index(request):
     bags = Bag.objects.all()
     return render(request, 'bags/index.html', { 'bags' : bags })
 
-# @login_required
+@login_required
 def new_bag(request):
     if request.method == 'POST':
         form = BagForm(request.POST)
         if form.is_valid():
             bag = form.save(commit=False)
-            # bag.user = request.user
+            bag.user = request.user
             # built in auth automatically assigns user to request
             bag.save()
             return redirect('public_index')
@@ -56,13 +56,33 @@ def public_bag_detail(request, bag_id):
 
 
 ###### PROFILE VIEWS
-def profile(request, profile_id):
-    bags = Bag.objects.get(id=profile_id)
+def profile(request):
+    user = request.user
+    bags = Bag.objects.filter(user=user)
     return render(request, 'main_app/profile.html', {'bags': bags})
 
-def profile_bag_detail(request, bag_id):
-    bag=Bag.objects.get(id=bag_id)
+def profile_bag_detail(request, user_id, bag_id):
+    user_id = User.objects.get(id=user_id)
+    bag = Bag.objects.get(id=bag_id)
     return render(request, 'main_app/bag_detail.html', {'bag': bag}) 
+
+# @login_required
+def bags_update(request, user_id, bag_id):
+    user_id = User.objects.get(id=user_id)
+    bag = Bag.objects.get(id=bag_id)
+    return render(request, 'main_app/update_bag_form.html')
+    # if request.method == 'POST':
+    #     form = BagForm(request.POST, instance=bag)
+    #     if form.is_valid():
+    #         bag = form.save()
+    #         return render('main_app/update_bag_form.html', {'bag': bag})
+    # else:
+    #     return redirect('public_index')
+    #     form = BagForm(instance=bag)
+    # context = { 'form': form }
+    # return render(request, 'main_app/toy_form.html', context)
+
+
 
 # @login_required
 # def add_item(request, bag_id):
