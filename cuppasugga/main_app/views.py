@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Profile, Bag, Item
-from .forms import BagForm, ItemForm
+from .models import Profile, Bag
+from .forms import BagForm
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -21,36 +21,47 @@ from django.contrib.auth.decorators import login_required
 #     context = { 'form': form, 'error_message': error_message }
 #     return render(request, 'registration/signup.html', context )
 
-# views for otters
-# def home(request):
-#     return render(request, 'home.html')
+# Landing Page
+def home(request):
+    return render(request, 'home.html')
 
-# def about(request):
-#     return render(request, 'about.html')
+def about(request):
+    return render(request, 'about.html')
 
-# @login_required
-# def otters_index(request):
-#     otters = Otter.objects.filter(user=request.user)
-#     return render(request, 'otters/index.html', { 'otters' : otters })
 
-# @login_required
-# def otters_detail(request, otter_id):
-#     otter = Otter.objects.get(id=otter_id)
-#     toys_otter_doesnt_have = Toy.objects.exclude(id__in = otter.toys.all().values_list('id'))
-#     feeding_form = FeedingForm()
-#     return render(request, 'otters/detail.html', { 
-#         'otter': otter, 'feeding_form': feeding_form,
-#         'toys': toys_otter_doesnt_have
-#     })
+def public_index(request):
+    bags = Bag.objects.all()
+    return render(request, 'bags/index.html', { 'bags' : bags })
 
 # @login_required
-def add_item(request, bag_id):
-    form = ItemForm(request.POST)
-    if form.is_valid():
-        new_item = form.save(commit=False)
-        new_item.otter_id = otter_id
-        new_item.save()
-    return redirect('detail', otter_id=otter_id)
+def new_bag(request):
+    if request.method == 'POST':
+        form = BagForm(request.POST)
+        if form.is_valid():
+            bag = form.save(commit=False)
+            # bag.user = request.user
+            # built in auth automatically assigns user to request
+            bag.save()
+            return redirect('public_index')
+    else:
+        form = BagForm()
+    context = { 'form': form }
+    return render(request, 'bags/bag_form.html', context)
+
+
+# @login_required
+def public_bag_detail(request, bag_id):
+    bag = Bag.objects.get(id=bag_id)
+    return render(request, 'bags/public_detail.html', { 'bag' : bag })
+
+# @login_required
+# def add_item(request, bag_id):
+#     form = ItemForm(request.POST)
+#     if form.is_valid():
+#         new_item = form.save(commit=False)
+#         new_item.otter_id = otter_id
+#         new_item.save()
+#     return redirect('detail', otter_id=otter_id)
 
 # @login_required
 # def assoc_toy(request, otter_id, toy_id):
@@ -62,21 +73,7 @@ def add_item(request, bag_id):
 #     Otter.objects.get(id=otter_id).toys.remove(toy_id)
 #     return redirect('detail', otter_id=otter_id)
 
-# @login_required
-# def new_otter(request):
-#     if request.method == 'POST':
-#         form = OtterForm(request.POST)
-#         if form.is_valid():
-#             otter = form.save(commit=False)
-#             otter.user = request.user
-#             # built in auth automatically assigns user to request
-#             otter.save()
-#             return redirect('detail', otter.id)
-#     else:
-#         form = OtterForm()
-#     context = { 'form': form }
-#     return render(request, 'otters/otter_form.html', context)
-
+# 
 # # views for toys
 # @login_required
 # def toys_index(request):
@@ -102,17 +99,17 @@ def add_item(request, bag_id):
 #     return render(request, 'main_app/toy_form.html', context)
 
 # @login_required
-def toys_update(request, toy_id):
-    toy = Toy.objects.get(id=toy_id)
-    if request.method == 'POST':
-        form = ToyForm(request.POST, instance=toy)
-        if form.is_valid():
-            toy = form.save()
-            return redirect('toys_index')
-    else:
-        form = ToyForm(instance=toy)
-    context = { 'form': form }
-    return render(request, 'main_app/toy_form.html', context)
+# def toys_update(request, toy_id):
+#     toy = Toy.objects.get(id=toy_id)
+#     if request.method == 'POST':
+#         form = ToyForm(request.POST, instance=toy)
+#         if form.is_valid():
+#             toy = form.save()
+#             return redirect('toys_index')
+#     else:
+#         form = ToyForm(instance=toy)
+#     context = { 'form': form }
+#     return render(request, 'main_app/toy_form.html', context)
 
 # @login_required
 # def toys_delete(request, toy_id):

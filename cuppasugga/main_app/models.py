@@ -1,6 +1,5 @@
 from django.db import models
 from django.db.models import CharField
-from django_mysql.models import ListCharField
 from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
@@ -22,13 +21,12 @@ class Profile(models.Model):
 # User profile can have one bag (MVP) --> can expand to many later
 class Bag(models.Model):
     # item = models.CharField(max_length=50)
-    profile = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = ListCharField(
-        name = models.CharField(max_length=50),
-        description = models.TextField(max_length=200),
-        quantity = models.PositiveSmallIntegerField()
-    )
-    
+    # profile = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.CharField(max_length=500)
+
+    def __str__(self):
+      return f'bag {self.id}' 
+   
 # class Item(models.Model):
 #     name = models.CharField(max_length=50)
 #     description = models.TextField(max_length=200)
