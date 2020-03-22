@@ -6,13 +6,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Otter Collector</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Cuppa Sugga</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
+
 <body>
+
+  <header>
+    <!-- role and aria-label are bonus points for accessibility -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="https://i.ibb.co/bdRNgBW/cuppasugga.png" width="112" height="28">
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+          <a href="{% url 'home' %}" class="navbar-item">Home</a>
+          <a href="{% url 'about' %}" class="navbar-item">About</a>
+          <a href="{% url 'public_index' %}" class="navbar-item">View Available Bags</a>
+          </div>
+        </div>
+    
+        <div class="navbar-end">
+          {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}" class="navbar-item">Profile</a>
+            <a href="{% url 'new_bag' %}" class="navbar-item">Build A Bag</a>
+            <a href="{% url 'logout' %}" class="navbar-item">Log Out</a>
+          {% else %}
+            <div class="navbar-item">
+              <div class="buttons">
+                <a href="{% url 'signup' %}" class="button is-primary">
+                  <strong>Sign Up</strong>
+                </a>
+                <a href="{% url 'login' %}" class="button is-light">
+                  Log In
+                </a>
+              </div>
+            </div>
+            
+          {% endif %}
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!-- <body>
   <header class="navbar-fixed">
     <nav>
       <div class="nav-wrapper" id="nav-wrapper-color">
@@ -32,14 +76,26 @@
           {% endif %}
         </ul>
       </div>
-    </nav>
-  </header>
-  <main class="container">
-    {% block content %}
-    {% endblock %}
-  </main>
-  <footer class="page-footer" id="page-footer-color">
-    <div class="right">All Rights Reserved, &copy; 2020 Otter Collector &nbsp;</div>
-  </footer>
-</body>
+    </nav> -->
+
+  <!-- Bulma structure: section must be direct child of <body>, and 
+  <div class="container"> is a lower level container. If it gets
+  annoying to have the container nested globally, it can be applied
+  to specific pages as desired. -->
+  <section class="section">
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </section>
+
+  <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          All Rights Reserved, &copy; 2020 Cuppa Sugga
+        </p>
+      </div>
+    </footer>
+    
+  </body>
 </html>
