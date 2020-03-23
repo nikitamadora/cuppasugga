@@ -7,11 +7,11 @@ class BagForm(forms.ModelForm):
         model = Bag
         fields = ('content',)
 
-# Items
-# class FeedingForm(forms.ModelForm):
-#     class Meta:
-#         model = Feeding
-#         fields = ['date', 'meal']
+
+class UpdateForm(forms.ModelForm):
+    class Meta:
+        model = Bag
+        fields =  ('content',)
 
 # Items
 # class ToyForm(forms.ModelForm):

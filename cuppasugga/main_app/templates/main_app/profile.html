@@ -3,6 +3,8 @@
 
 <h1>User Profile</h1>
 
+
+
 <h5>My Bags</h5>
     {% for bag in bags %}
     <a href="{% url 'profile_bag_detail' user.id bag.id %}">
@@ -11,10 +13,10 @@
                 <span class="card-title"></span>
                 <p>{{ bag.content }}</p>
             </div>
-            <div class="card-action">
+            {% comment %} <div class="card-action">
                 <a href="{% url 'bags_update' user.id bag.id %}">Edit</a>
-                {% comment %} <a href="{% url 'toys_delete' toy.id %}">Delete</a> {% endcomment %}
-            </div>
+                <a href="{% url 'toys_delete' toy.id %}">Delete</a>
+            </div> {% endcomment %}
         </div>
     </a>
     {% empty %}

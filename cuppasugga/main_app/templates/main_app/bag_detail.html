@@ -10,10 +10,10 @@
                 <span class="card-title"></span>
                 <p>Color: {{ bag.content }}</p>
             </div>
-            {% comment %} <div class="card-action">
-                <a href="{% url 'toys_update' toy.id %}">Edit</a>
-                <a href="{% url 'toys_delete' toy.id %}">Delete</a>
-            </div> {% endcomment %}
+          <div class="card-action">
+                <a href="{% url 'bags_update' user.id bag.id %}">Edit</a>
+                {% comment %} <a href="{% url 'toys_delete' toy.id %}">Delete</a> {% endcomment %}
+            </div> 
         </div>
     </div>
 </div>
