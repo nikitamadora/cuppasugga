@@ -1,10 +1,59 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>About the Team</h1>
+<section id="team-header">
+  <div class="container">
+    <h1 class="is-size-1 has-text-centered">About the Team</h1>
+    <h5 class="is-size-5 has-text-centered">
+      Cuppa Sugga was devised by a trio of software engineering students
+      during the COVID-19 quarantine. While questionably safe for elderly and
+      immuno-compromised community members to leave their homes, Kris,
+      Kita, and Beni decided to create an app that would allow anyone
+      to put together a bag of necessities (or fun things!), and offer it
+      to their community as a donation.
+    </h5>
+  </div>
+</section>
+
+<section id="team-profiles" class="columns is-centered is-vcentered">
+
+  <div class="column has-background-grey-light">
+    <div class="container has-background-primary">
+        <!-- center-horizontal is custom css, not bulma -->
+        <figure class="image is-128x128 center-horizontal">
+          <img class="is-rounded" src="https://ca.slack-edge.com/T0351JZQ0-UR7PP76EP-2934a9d52648-512">
+        </figure>
+        <h3 class="is-size-4 has-text-centered">Kris</h3>
+        <p class="has-text-centered about-text">Kris is amazing, and has an affinity for good hats. Be like Kris.</p>
+    </div>
+  </div>
+
+  <div class="column has-background-grey">
+    <div class="container has-background-primary">
+      <figure class="image is-128x128 center-horizontal">
+        <img class="is-rounded" src="https://ca.slack-edge.com/T0351JZQ0-US60D3ADP-4c24f9b742ed-512">
+      </figure>
+      <h3 class="is-size-4 has-text-centered">Beni</h3>
+      <p class="has-text-centered about-text">Beni is wonderful, and he has so many wonderful things to say about himself. Be like Beni.</p>
+    </div>
+  </div>
+
+  <div class="column has-background-grey-dark">
+    <div class="container has-background-primary">
+      <figure class="image is-128x128 center-horizontal">
+        <img class="is-rounded" src="https://ca.slack-edge.com/T0351JZQ0-US1FS0ZFF-bf9ea338ce9f-512">
+      </figure>
+      <h3 class="is-size-4 has-text-centered">Kita</h3>
+      <p class="has-text-centered about-text">Kita loves cats, and dogs, and all good things. Be like Kita.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- <h1>About the Team</h1>
 <hr />
 <h5>Create new otters and toys in this fun collection.<br><br>Feed the otters daily and give them the toys you created!</h5>
 <br>
-<h6>✨Because we really otter be friends ✨</h6>
+<h6>✨Because we really otter be friends ✨</h6> -->
 
 {% endblock %}

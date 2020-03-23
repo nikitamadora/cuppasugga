@@ -64,6 +64,7 @@ def profile(request):
 def profile_bag_detail(request, user_id, bag_id):
     user_id = User.objects.get(id=user_id)
     bag = Bag.objects.get(id=bag_id)
+
     return render(request, 'main_app/bag_detail.html', {'bag': bag}) 
 
 # @login_required

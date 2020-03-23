@@ -1,6 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 id="custom-welcome">Welcome to Cuppa Sugga</h1>
-    <h2>lend me some sugar, i am your neighbor</h2>
+
+  <!-- Main -->
+  <main class="section">
+    <div class="columns is-vcentered" id="main-columns">
+
+      <!-- Bag on Left -->
+      <div class="column has-text-right">
+        <div id="bag-image" class="is-hidden-mobile">
+          <img src="https://i.ibb.co/zx9zWMk/cs-bag.png" width="300" height="300" alt="cuppa sugga bag">
+        </div>
+      </div>
+
+      <!-- Text/Buttons on Right -->
+      <div class="column">
+        <div id="main-hooks">
+
+          <div id="recipient-hook">
+            <p class="has-text-white is-size-4">Need a little something from a neighbor?</p>
+            <button class="button is-danger is-small" id="hook-view-all-btn">See Available Donations</button>
+          </div>
+
+          <div id="donor-hook">
+            <p class="has-text-white is-size-4">Have a little extra to share?</p>
+            <button class="button is-danger is-small" id="hook-login-btn">Login to Donate a Bag</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
 {% endblock content %}
