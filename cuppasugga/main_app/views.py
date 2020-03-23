@@ -70,17 +70,38 @@ def profile_bag_detail(request, user_id, bag_id):
 def bags_update(request, user_id, bag_id):
     user_id = User.objects.get(id=user_id)
     bag = Bag.objects.get(id=bag_id)
-    return render(request, 'main_app/update_bag_form.html')
-    # if request.method == 'POST':
-    #     form = BagForm(request.POST, instance=bag)
-    #     if form.is_valid():
-    #         bag = form.save()
-    #         return render('main_app/update_bag_form.html', {'bag': bag})
-    # else:
-    #     return redirect('public_index')
-    #     form = BagForm(instance=bag)
-    # context = { 'form': form }
-    # return render(request, 'main_app/toy_form.html', context)
+    if request.method == 'POST':
+        form = BagForm(request.POST, instance=bag)
+        if form.is_valid():
+            bag = form.save()
+            return redirect('profile')
+    else:
+        form = BagForm(instance=bag)
+    context = { 'form': form }
+    return render(request, 'main_app/update_bag_form.html', context)
+   
+# @login_required
+def bags_delete(request, user_id, bag_id):
+    context = {}
+    user_id = User.objects.get(id=user_id)
+    bag = Bag.objects.get(id=bag_id)
+    if request.method == 'POST':
+        bag.delete()
+        return redirect('profile')
+
+    return render(request, 'main_app/bag_confirm_delete.html', context)
+
+
+# def update_submit(request, bag_id):
+#     if request.method == 'POST':
+#         form = UpdateForm(request.POST, instance=bag)
+#         if form.is_valid():
+#             bag = form.save()
+#             return redirect('profile')
+#     else:
+#         form = UpdateForm(instance=bag)
+#     context = { 'form': form }
+#     return render(request, 'main_app/update_bag_form.html', context)
 
 
 

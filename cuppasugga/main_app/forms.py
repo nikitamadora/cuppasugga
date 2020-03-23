@@ -5,13 +5,13 @@ from .models import Bag
 class BagForm(forms.ModelForm):
     class Meta:
         model = Bag
-        fields = ('content',)
+        fields = ('name','content')
 
-# Items
-# class FeedingForm(forms.ModelForm):
+
+# class UpdateForm(forms.ModelForm):
 #     class Meta:
-#         model = Feeding
-#         fields = ['date', 'meal']
+#         model = Bag
+#         fields =  ('content',)
 
 # Items
 # class ToyForm(forms.ModelForm):
