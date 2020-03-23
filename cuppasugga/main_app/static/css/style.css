@@ -52,7 +52,9 @@ font-family: 'Gamja Flower', cursive; */
   background: linear-gradient(260deg, rgba(255,160,233,1) 0%, rgba(149,216,238,.6) 82%);
 }
 
-
+#team-profiles {
+  margin: 25px;
+}
 
 @media screen and (max-width: 768px) {
   #main-hooks {
@@ -71,7 +73,17 @@ font-family: 'Gamja Flower', cursive; */
   margin: 0 auto;
 }
 
+.about-text {
+  padding: 0 30px 10px 30px;
+}
 
+.about-img {
+  padding-top: 10px;
+}
+
+#team-profiles figure {
+  padding-top: 10px;
+}
 /* ------------------------------------------- ANIMATIONS --------- */
 
 .rotate-scale-up-diag-2 {
