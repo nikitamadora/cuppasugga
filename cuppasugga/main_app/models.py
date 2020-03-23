@@ -33,7 +33,8 @@ class Profile(models.Model):
 class Bag(models.Model):
     # item = models.CharField(max_length=50)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    content = models.CharField(max_length=500)
+    name = models.CharField(max_length=50)
+    content = models.TextField(max_length=500)
 
     def __str__(self):
       return f'bag {self.id}' 
