@@ -14,6 +14,7 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('profile/<int:user_id>/bags/<int:bag_id>/', views.profile_bag_detail, name='profile_bag_detail'),
     path('profile/<int:user_id>/bags/<int:bag_id>/update/', views.bags_update, name='bags_update'),
+    path('profile/<int:user_id>/bags/<int:bag_id>/delete/', views.bags_delete, name='bags_delete'),
     
     # path('profile/<int:profile_id>/bags/new/')
 

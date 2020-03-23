@@ -80,6 +80,16 @@ def bags_update(request, user_id, bag_id):
     context = { 'form': form }
     return render(request, 'main_app/update_bag_form.html', context)
    
+# @login_required
+def bags_delete(request, user_id, bag_id):
+    context = {}
+    user_id = User.objects.get(id=user_id)
+    bag = Bag.objects.get(id=bag_id)
+    if request.method == 'POST':
+        bag.delete()
+        return redirect('profile')
+
+    return render(request, 'main_app/bag_confirm_delete.html', context)
 
 
 # def update_submit(request, bag_id):

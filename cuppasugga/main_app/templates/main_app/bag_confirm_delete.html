@@ -2,12 +2,12 @@
 {% block content %}
 <h1>Delete Bag</h1>
 
-<h4>Are you sure you want to delete <span class="teal-text">{{ toy.name }}</span>?</h4>
+<h4>Are you sure you want to delete <span class="teal-text">{{ bag.content }}</span>?</h4>
 
 <form action="" method="POST">
     {% csrf_token %}
     <input type="submit" value="I'm sure - Delete!" class="btn">
-    <a href="{% url 'toys_index' %}">Cancel</a>
+    <a href="{% url 'profile' %}">Cancel</a>
 </form>
 
 {% endblock %}
