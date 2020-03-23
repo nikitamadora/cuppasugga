@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Available Bags</h1>
+<section class="list-header">
+  <div class="container">
+    <h1 class="is-size-1">Available Bags</h1>
+  </div>
+</section>
 
 {% for bag in bags %}
   <div class="card">
     <a href="{% url 'public_bag_detail' bag.id %}">
       <div class="card-content">
-        <span class="card-title">{{ bag.name }}</span>
+        <span class="card-title is-size-4 has-text-primary">{{ bag.name }}</span>
       </div>
+    </a>
   </div>
 {% endfor %}
 
