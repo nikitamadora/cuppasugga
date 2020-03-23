@@ -2,102 +2,79 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cuppa Sugga</title>
-  <link href="https://fonts.googleapis.com/css?family=Delius+Swash+Caps|Gamja+Flower|Gochi+Hand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cuppa Sugga</title>
+    <link href="https://fonts.googleapis.com/css?family=Delius+Swash+Caps|Gamja+Flower|Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
 
-<body>
+  <body>
+    <div id="stripes">
 
-  <header>
-    <!-- role and aria-label are bonus points for accessibility -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img src="https://i.ibb.co/bdRNgBW/cuppasugga.png" width="112" height="28">
-        </a>
-      </div>
-    
-      <div class="navbar-menu">
-        <div class="navbar-start">
-
-          <a href="{% url 'home' %}" class="navbar-item">Home</a>
-          <a href="{% url 'about' %}" class="navbar-item">About</a>
-          <a href="{% url 'public_index' %}" class="navbar-item">View Available Bags</a>
+    </div>
+      <header>
+        <!-- role and aria-label are bonus points for accessibility -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+              <img src="https://i.ibb.co/bdRNgBW/cuppasugga.png" width="112" height="28">
+            </a>
           </div>
-        </div>
-    
-        <div class="navbar-end">
-          {% if user.is_authenticated %}
-            <a href="{% url 'profile' %}" class="navbar-item">Profile</a>
-            <a href="{% url 'new_bag' %}" class="navbar-item">Build A Bag</a>
-            <div class="navbar-item">
-              <a href="{% url 'logout' %}" class="button is-small is-outlined is-danger">Log Out</a></div>
-          {% else %}
-            <div class="navbar-item">
-              <div class="buttons">
-                <a href="{% url 'signup' %}" class="button is-primary">
-                  <strong>Sign Up</strong>
-                </a>
-                <a href="{% url 'login' %}" class="button is-light">
-                  Log In
-                </a>
+        
+            <div class="navbar-menu">
+              <div class="navbar-start">
+
+              <a href="{% url 'home' %}" class="navbar-item">Home</a>
+              <a href="{% url 'about' %}" class="navbar-item">About</a>
+              <a href="{% url 'public_index' %}" class="navbar-item">View Available Bags</a>
               </div>
             </div>
-            
-          {% endif %}
-          
+        
+            <div class="navbar-end">
+              {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" class="navbar-item">Profile</a>
+                <a href="{% url 'new_bag' %}" class="navbar-item">Build A Bag</a>
+                <div class="navbar-item">
+                  <a href="{% url 'logout' %}" class="button is-small is-outlined is-danger">Log Out</a></div>
+              {% else %}
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a href="{% url 'signup' %}" class="button is-primary">
+                      <strong>Sign Up</strong>
+                    </a>
+                    <a href="{% url 'login' %}" class="button is-light">
+                      Log In
+                    </a>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+        </nav>
+      </header>
+
+      <!-- Bulma structure: section must be direct child of <body>, and 
+      <div class="container"> is a lower level container. If it gets
+      annoying to have the container nested globally, it can be applied
+      to specific pages as desired. -->
+      <section class="section">
+        <!-- <div class="container"> -->
+          {% block content %}
+          {% endblock %}
+        <!-- </div> -->
+      </section>
+
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            All Rights Reserved, &copy; 2020 Cuppa Sugga
+          </p>
         </div>
-      </div>
-    </nav>
-  </header>
-
-<!-- <body>
-  <header class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper" id="nav-wrapper-color">
-        <ul>
-          <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Cuppa Sugga</a></li>
-        </ul>
-        <ul class="right">
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'public_index' %}">View Available Bags</a></li>
-          {% if user.is_authenticated %}
-            <li><a href="{% url 'profile' %}">Profile</a></li>
-            <li><a href="{% url 'new_bag' %}">Build A Bag</a></li>
-            <li><a href="{% url 'logout' %}">Log Out</a></li>
-          {% else %}
-            <li><a href="{% url 'signup' %}">Sign Up</a></li>
-            <li><a href="{% url 'login' %}">Log In</a></li>
-          {% endif %}
-        </ul>
-      </div>
-    </nav> -->
-
-  <!-- Bulma structure: section must be direct child of <body>, and 
-  <div class="container"> is a lower level container. If it gets
-  annoying to have the container nested globally, it can be applied
-  to specific pages as desired. -->
-  <section class="section">
-    <!-- <div class="container"> -->
-      {% block content %}
-      {% endblock %}
-    <!-- </div> -->
-  </section>
-
-  <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          All Rights Reserved, &copy; 2020 Cuppa Sugga
-        </p>
-      </div>
-    </footer>
-    
+      </footer>
+    </div>
   </body>
 </html>
