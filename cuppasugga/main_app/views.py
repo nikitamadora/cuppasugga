@@ -4,6 +4,8 @@ from .forms import BagForm, UserCreateForm, ProfileForm
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
 
 # Create your views here.
 # user signup view
@@ -41,11 +43,13 @@ def new_bag(request):
     if request.method == 'POST':
         form = BagForm(request.POST)
         if form.is_valid():
+            messages.success(request, "this form is valid!")
             bag = form.save(commit=False)
             bag.user = request.user
             bag.save()
             return redirect('public_index')
     else:
+        messages.error(request, "access denied! try again!")
         form = BagForm()
     context = { 'form': form }
     return render(request, 'bags/bag_form.html', context)
