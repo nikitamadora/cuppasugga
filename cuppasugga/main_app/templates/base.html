@@ -16,7 +16,6 @@
   <body>
     <div id="stripes"></div>
     <header>
-      <!-- role and aria-label are bonus points for accessibility -->
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="{% url 'home' %}">
@@ -55,10 +54,6 @@
       </nav>
     </header>
 
-    <!-- Bulma structure: section must be direct child of <body>, and 
-    <div class="container"> is a lower level container. If it gets
-    annoying to have the container nested globally, it can be applied
-    to specific pages as desired. -->
     <section class="section">
       <!-- <div class="container"> -->
         {% block content %}
@@ -66,7 +61,7 @@
       <!-- </div> -->
     </section>
 
-    <footer class="footer2">
+    <footer class="footer">
       <div class="content has-text-centered">
         <p>
           All Rights Reserved, &copy; 2020 Cuppa Sugga
