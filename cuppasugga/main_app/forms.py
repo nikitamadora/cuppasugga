@@ -14,7 +14,6 @@ class BagForm(forms.ModelForm):
           'help': ('String for now'),
         }
 
-
 # return alphanumeric and whitespace values; no special chars
     def clean_name(self):
         name = self.cleaned_data['name']

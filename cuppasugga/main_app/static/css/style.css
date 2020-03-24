@@ -1,23 +1,4 @@
 /* ------------------------------------------  GLOBAL -----------*/
-.card-pale {
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-}
-
-.card-paler {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.extra-padding {
-  padding: 2rem;
-}
-
-.global-content {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
 body {
   height: 100%;
   margin: 0;
@@ -35,6 +16,25 @@ main header {
 
 .card {
   border-radius: 15px;
+}
+
+.card-pale {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.card-paler {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.extra-padding {
+  padding: 2rem;
+}
+
+.global-content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .center-horizontal {
@@ -107,10 +107,6 @@ main header {
   margin: 10px 0 0 0;
 }
 
-#donor-hook:hover {
-
-}
-
 /* ------------------------------------------  ABOUT  ----------- */
 #team-profiles {
   margin: 25px;
@@ -177,15 +173,6 @@ main header {
   max-width: 70%;
   width: 100%;
 }
-
-.bag-form input[type=text] {
-
-}
-
-.bag-form textarea {
-
-}
-
 
 /* ------------------------------------------- ANIMATIONS --------- */
 
