@@ -10,16 +10,18 @@
 <div class="card" id="profile-header">
     <div class="card-content">
         <span class="is-size-2 is-capitalized">Hello, {{user.profile.user}}!</span>
-        <p class="is-size-5">You have offered to donate the following bags:</p>
         <span>{{ user.profile.location}}</span>
         <span>{{ user.profile.bio}}</span>
     </div>
+    {% if user.is_authenticated %}
     <div class="card-action">
         <a href="{% url 'profile_update' user.id %}">Update</a>
-    </div>
+    </div> 
+    {% endif %}
 </div>
 
 <section class="container">
+  <p class="is-size-5">You have offered to donate the following bags:</p>
   {% for bag in bags %}
   <a href="{% url 'profile_bag_detail' user.id bag.id %}">
     <div class="card">

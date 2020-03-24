@@ -19,12 +19,12 @@
 
           <div id="recipient-hook">
             <p class="has-text-white is-size-4">Need a little something from a neighbor?</p>
-            <button class="button is-danger is-small" id="hook-view-all-btn">See Available Donations</button>
+            <a href="{% url 'public_index' %}" class="button is-danger is-small" id="hook-view-all-btn">See Available Donations</a>
           </div>
 
           <div id="donor-hook">
             <p class="has-text-white is-size-4">Have a little extra to share?</p>
-            <button class="button is-danger is-small" id="hook-login-btn">Login to Donate a Bag</button>
+            <a href="{% url 'login' %}" class="button is-danger is-small" id="hook-login-btn">Login to Donate a Bag</a>
           </div>
 
         </div>
