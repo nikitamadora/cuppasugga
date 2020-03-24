@@ -8,13 +8,11 @@ from django.core.exceptions import NON_FIELD_ERRORS
 
 class BagForm(forms.ModelForm):
     class Meta:
-        # error_messages = {
-        #     NON_FIELD_ERRORS:{
-        #         'character_max': '%(model_name)s% (field_label)s has a 50 character limit'
-        #     }
-        # }
         model = Bag
         fields = ('name','content')
+        help_texts = {
+          'help': ('String for now'),
+        }
 
 
 # return alphanumeric and whitespace values; no special chars
