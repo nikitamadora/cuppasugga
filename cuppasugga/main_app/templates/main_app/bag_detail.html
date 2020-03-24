@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- ---------------- USER/PROFILE DETAIL  -->
+
 <!-- Bag & Bag Contents -->
 <div class="columns is-centered">
   <div class="column is-three-fifths">
@@ -8,9 +10,13 @@
   <div class="card card-pale">
     <div class="card-content">
       <span class="card-title is-size-5">This bag contains the following:</span>
-      {% for item in bag.content %}
-        <p>{{ item }}</p>
-      {% endfor %}
+      <div class="content">
+        <ol type="1">
+          {% for item in bag.content %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ol>
+      </div>
       <div class="buttons">
         <a href="{% url 'bags_update' user.id bag.id %}" class="button is-primary">
           <strong>Edit This Bag</strong>
