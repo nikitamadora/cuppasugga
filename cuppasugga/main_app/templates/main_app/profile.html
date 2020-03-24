@@ -2,32 +2,32 @@
 {% block content %}
 
 <section class="list-header">
-  <!-- <div class="container"> -->
+  <div class="container">
     <h1 class="is-size-1 ">User Profile</h1>
-  <!-- </div> -->
+  </div>
 </section>
 
-<div class="card" id="profile-header">
-    <div class="card-content">
-        <span class="is-size-2 is-capitalized">Hello, {{user.profile.user}}!</span>
-        <p>{{ user.profile.location}}</p>
-        <p>{{ user.profile.bio}}</>
-    </div>
-    <div class="buttons">
-        <a class="button is-primary" href="{% url 'profile_update' user.id %}">Update Your Profile</a>
-    </div>
+<div class="card card-pale" id="profile-header">
+  <div class="card-content">
+    <div class="is-size-2 is-capitalized">Hello, {{user.profile.user}}</div>
+    <p>{{ user.profile.location}}</p>
+    <p>{{ user.profile.bio}}</>
+  </div>
+  <div class="buttons">
+    <a class="button is-primary" href="{% url 'profile_update' user.id %}">Update Your Profile</a>
+  </div>
 </div>
 
 <section class="container">
   <div class="columns">
-      <p class="is-size-5 column">
-        You have offered to donate the following bags:
-      </p>
+    <p class="is-size-5 column">
+      You have offered to donate the following bags:
+    </p>
   </div>
   <div class="columns">
     {% for bag in bags %}
     <a href="{% url 'profile_bag_detail' user.id bag.id %}" class="column">
-      <div class="card">
+      <div class="card card-pale">
         <div class="card-content">
           <span class="card-title">{{bag.name}}</span>
         </div>
