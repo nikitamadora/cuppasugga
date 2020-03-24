@@ -54,6 +54,7 @@ def new_bag(request):
 def public_bag_detail(request, bag_id):
     bag = Bag.objects.get(id=bag_id)
     donor = User.objects.get(id=bag.user.id)
+    bag.content = bag.content.split(',')
     context = { 'bag': bag, 'donor_email': donor.email }
     return render(request, 'bags/public_detail.html', context)
 
