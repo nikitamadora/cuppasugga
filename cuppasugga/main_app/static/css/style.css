@@ -115,14 +115,13 @@ main header {
 /* ------------------------------------------  ABOUT  ----------- */
 #team-profiles {
   margin: 25px;
-  padding-top: 10px;
 }
 
 .about-text {
   padding: 0 30px 10px 30px;
 }
 
-.about-img {
+.about-box {
   padding-top: 10px;
 }
 
