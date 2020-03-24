@@ -13,9 +13,7 @@ def signup(request):
     if request.method == 'POST':
         form = UserCreateForm(request.POST)
         if form.is_valid():
-          # user = form.save()
           form.save()
-          # login(request, user)
           return redirect('login')
 
         else:
@@ -47,13 +45,12 @@ def new_bag(request):
             bag = form.save(commit=False)
             bag.user = request.user
             bag.save()
-            return redirect('public_index')
+            return redirect('profile')
     else:
         messages.error(request, "access denied! try again!")
         form = BagForm()
     context = { 'form': form }
     return render(request, 'bags/bag_form.html', context)
-
 
 def public_bag_detail(request, bag_id):
     bag = Bag.objects.get(id=bag_id)
