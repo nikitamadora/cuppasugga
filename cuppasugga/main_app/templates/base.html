@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cuppa Sugga</title>
-    <link href="https://fonts.googleapis.com/css?family=Delius+Swash+Caps|Gamja+Flower|Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -16,7 +16,6 @@
   <body>
     <div id="stripes"></div>
     <header>
-      <!-- role and aria-label are bonus points for accessibility -->
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="{% url 'home' %}">
@@ -37,8 +36,10 @@
             {% if user.is_authenticated %}
               <a href="{% url 'profile' %}" class="navbar-item">Profile</a>
               <a href="{% url 'new_bag' %}" class="navbar-item">Build A Bag</a>
+              <a href="{% url 'public_index' %}" class="navbar-item">View Available Bags</a>
               <div class="navbar-item">
-                <a href="{% url 'logout' %}" class="button is-small is-outlined is-danger">Log Out</a></div>
+                <a href="{% url 'logout' %}" class="button is-small is-outlined is-danger">Log Out</a>
+              </div>
             {% else %}
               <div class="navbar-item">
                 <div class="buttons">
@@ -55,10 +56,6 @@
       </nav>
     </header>
 
-    <!-- Bulma structure: section must be direct child of <body>, and 
-    <div class="container"> is a lower level container. If it gets
-    annoying to have the container nested globally, it can be applied
-    to specific pages as desired. -->
     <section class="section">
       <!-- <div class="container"> -->
         {% block content %}
@@ -66,7 +63,7 @@
       <!-- </div> -->
     </section>
 
-    <footer class="footer2">
+    <footer class="footer">
       <div class="content has-text-centered">
         <p>
           All Rights Reserved, &copy; 2020 Cuppa Sugga

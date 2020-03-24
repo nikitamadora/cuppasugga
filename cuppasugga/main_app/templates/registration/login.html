@@ -6,8 +6,6 @@
     <h1 class="is-size-1">Login</h1>
     <form id="login-form" method="post" action="{% url 'login' %}">
       {% csrf_token %}
-      <!-- TODO - For deconstructing the form; build out the rest: -->
-      <!-- <label class="label" for="{{ form.username.id_for_label }}">Username</label> -->
       {{ form.as_p }}
       <input type="submit" class="btn" value="login">
       <input type="hidden" name="next" value="{{ next }}">

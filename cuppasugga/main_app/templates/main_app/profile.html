@@ -2,37 +2,44 @@
 {% block content %}
 
 <section class="list-header">
-  <!-- <div class="container"> -->
+  <div class="container">
     <h1 class="is-size-1 ">User Profile</h1>
-  <!-- </div> -->
+  </div>
 </section>
 
-<div class="card" id="profile-header">
-    <div class="card-content">
-        <span class="is-size-2 is-capitalized">Hello, {{user.profile.user}}!</span>
-        <span>{{ user.profile.location}}</span>
-        <span>{{ user.profile.bio}}</span>
-    </div>
-    {% if user.is_authenticated %}
-    <div class="card-action">
-        <a href="{% url 'profile_update' user.id %}">Update</a>
+<div class="card card-pale" id="profile-header">
+  <div class="card-content">
+    <div class="is-size-2 is-capitalized">Hello, {{user.profile.user}}</div>
+    <p>{{ user.profile.location}}</p>
+    <p>{{ user.profile.bio}}</>
+  </div>
+  {% if user.is_authenticated %}
+    <div class="buttons">
+        <a class="button is-primary" href="{% url 'profile_update' user.id %}">Update</a>
     </div> 
-    {% endif %}
+  {% endif %}
 </div>
 
 <section class="container">
-  <p class="is-size-5">You have offered to donate the following bags:</p>
-  {% for bag in bags %}
-  <a href="{% url 'profile_bag_detail' user.id bag.id %}">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">{{bag.name}}</span>
+  <div class="columns">
+    <p class="is-size-5 column">
+      You have offered to donate the following bags:
+    </p>
+  </div>
+  <div class="columns">
+    {% for bag in bags %}
+    <a href="{% url 'profile_bag_detail' user.id bag.id %}" class="column">
+      <div class="card card-pale">
+        <div class="card-content">
+          <span class="card-title">{{bag.name}}</span>
+        </div>
+
       </div>
-    </div>
-  </a>
-  {% empty %}
-      <p>Sorry, you have no bags.</p>
-  {% endfor %}
+    </a>
+    {% empty %}
+        <p>Sorry, you have no bags.</p>
+    {% endfor %}
+  </div>
 </section>
 
 {% endblock %}

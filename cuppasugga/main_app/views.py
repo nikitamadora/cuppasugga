@@ -13,10 +13,11 @@ def signup(request):
     if request.method == 'POST':
         form = UserCreateForm(request.POST)
         if form.is_valid():
-            # user = form.save()
-            form.save()
-            # login(request, user)
-            return redirect('login')
+          # user = form.save()
+          form.save()
+          # login(request, user)
+          return redirect('login')
+
         else:
             error_message = 'Invalid sign up - try again'
     form = UserCreateForm()

@@ -18,3 +18,26 @@
 {% endfor %}
 
 {% endblock %}
+
+<section class="container">
+  <div class="columns">
+    <div class="column">
+      <p class="is-size-4">
+        These bags are currently available!
+      </p>
+    </div>
+  </div>
+  <div class="columns">
+    {% for bag in bags %}
+    <a href="{% url 'profile_bag_detail' bag.id %}" class="column">
+      <div class="card card-pale">
+        <div class="card-content">
+          <span class="card-title">{{bag.name}}</span>
+        </div>
+      </div>
+    </a>
+    {% empty %}
+        <p>Sorry, you have no bags.</p>
+    {% endfor %}
+  </div>
+</section>
