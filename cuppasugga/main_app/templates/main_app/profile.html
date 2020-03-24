@@ -19,7 +19,11 @@
 </div>
 
 <section class="container">
-  <p class="is-size-5">You have offered to donate the following bags:</p>
+  <div class="columns">
+      <p class="is-size-5 column">
+        You have offered to donate the following bags:
+      </p>
+  </div>
   <div class="columns">
     {% for bag in bags %}
     <a href="{% url 'profile_bag_detail' user.id bag.id %}" class="column">

@@ -124,7 +124,12 @@ main header {
 /* ------------------------------------------  PROFILE  ----------- */
 
 #profile-header {
-  margin: 0 0 25px 0;
+  margin: 0 0 1rem 0;
+  padding: 1.5rem;
+}
+
+.card {
+  border-radius: 15px;
 }
 
 /* ------------------------------------------- FORMS --------- */
