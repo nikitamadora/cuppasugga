@@ -90,6 +90,7 @@ A couple in their 30s with no kids. They realized they had some excess items
      - Add more animations throughout the site
      - Add "Build A Bag" Button to Profile
      - Add bag images to each bag (instead of a card)
+     - Stylistic improvements to Sign Up/Log In
 
 ### OTHER COMPONENTS PREVIOUSLY INDICATED (if applicable)
 Not applicable.
