@@ -34,7 +34,6 @@ class Bag(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     content = models.TextField(max_length=500)
-    # donor_email = models.EmailField(max_length=50)
     
     def __str__(self):
       return f'bag {self.id}'

@@ -1,10 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section class="form-section">
-        <h1>Build A Bag</h1>
-        <form method="POST" class="artist-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn" type="submit">Save</button>
+    <section class="container">
+      <div class="center-horizontal custom-form">
+        
+          <h1 class="is-size-1">Build A Bag</h1>
+          <form method="POST" class="bag-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn button is-primary" type="submit">Save</button>
+          </form>
+       
+      </div>
     </section>
+
+
+{% comment %} action ="{% url 'public_index' %}" {% endcomment %}
+
+<!-- <section class="form-section">
+  <h1 class="is-size-1">Build A Bag</h1>
+    <form method="POST" class="bag-form">
+    {% csrf_token %}
+    
+    <div class="field">
+      <label class="label has-text-grey-dark">Name or Theme of This Bag</label>
+      <div class="control">
+        <input class="input" type="text" placeholder='"Pantry Essentials" or "Family Game Night"' name="name" maxlength="50" required id="id_name">
+      </div>
+    </div>
+    <button class="btn button is-primary" type="submit">Save</button>
+</section> -->
+
 {% endblock %}
