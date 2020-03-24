@@ -31,57 +31,10 @@ class Profile(models.Model):
 
 # User profile can have one bag (MVP) --> can expand to many later
 class Bag(models.Model):
-    # item = models.CharField(max_length=50)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     content = models.TextField(max_length=500)
-
+    # donor_email = models.EmailField(max_length=50)
+    
     def __str__(self):
-      return f'bag {self.id}' 
-
-   
-# class Item(models.Model):
-#     name = models.CharField(max_length=50)
-#     description = models.TextField(max_length=200)
-#     quantity = models.PositiveSmallIntegerField()
-#     bag = models.ForeignKey(Bag, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return self.name
-
-# class Toy(models.Model):
-#     name = models.CharField(max_length=50)
-#     color = models.CharField(max_length=20)
-
-#     def __str__(self):
-#         return self.name
-
-# class Otter(models.Model):
-#     name = models.CharField(max_length=100)
-#     species = models.CharField(max_length=100)
-#     description = models.TextField(max_length=250)
-#     age = models.IntegerField()
-#     toys = models.ManyToManyField(Toy)
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return self.name
-    
-#     def fed_for_today(self):
-#         return self.feeding_set.filter(date=date.today()).count() >= len(MEALS)
-
-# class Feeding(models.Model):
-#     date = models.DateField('feeding date')
-#     meal = models.CharField(
-#         max_length=1,
-#         choices=MEALS,
-#             default=MEALS[0][0]
-#     )
-    
-#     otter = models.ForeignKey(Otter, on_delete=models.CASCADE)
-
-#     def __str__(self):
-#         return f'{self.get_meal_display()} on {self.date}'
-    
-#     class Meta:
-#         ordering = ['-date']
+      return f'bag {self.id}'
