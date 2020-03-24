@@ -7,6 +7,10 @@ font-family: 'Gamja Flower', cursive; */
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
+.card-paler {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 /* ------------------------------------------  BASE  ----------- */
 #stripes {
   width: 100%;
@@ -75,17 +79,18 @@ main header {
 }
 
 #main-hooks {
-  width: 300px;
-  font-family: 'Delius Swash Caps', cursive;
+  width: 325px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  text-transform: capitalize;
 }
 
-#recipient-hook {
-  background: rgb(255,160,233);
-  background: linear-gradient(29deg, rgba(255,160,233,1) 0%, rgba(149,216,238,1) 82%);
+#recipient-hook, #donor-hook {
   margin: 0 0 30px 0;
-  border-radius: 20px;
+  border-radius: 15px;
   text-align: center;
-  height: 135px;
+  height: 150px;
   padding: 1rem;
 }
 
@@ -98,18 +103,8 @@ main header {
   margin: 10px 0 0 0;
 }
 
-#donor-hook {
-  background: rgb(255,160,233);
-  margin: 0 0 50px 0;
-  border-radius: 20px;
-  text-align: center;
-  height: 135px;
-  padding: 1rem;
-}
-
 #donor-hook:hover {
-  background: rgb(255,160,233);
-  background: linear-gradient(260deg, rgba(255,160,233,1) 0%, rgba(149,216,238,.6) 82%);
+
 }
 
 /* ------------------------------------------  ABOUT  ----------- */
