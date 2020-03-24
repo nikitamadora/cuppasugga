@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Delete Bag</h1>
 
-<h4>Are you sure you want to delete <span class="teal-text">{{ bag.content }}</span>?</h4>
+<div class="columns is-centered">
+  <div class="card card-pale column is-two-thirds extra-padding">
+    <h3 class="is-size-3">Delete Bag</h3>
+    <h4 class="is-size-5">Are you sure you want to delete?</h4>
 
-<form action="" method="POST">
-    {% csrf_token %}
-    <input type="submit" value="I'm sure - Delete!" class="btn">
-    <a href="{% url 'profile' %}">Cancel</a>
-</form>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="I'm sure - Delete!" class="btn button is-danger">
+        <a href="{% url 'profile' %}" class="button is-outlined">Cancel</a>
+    </form>
+  </div>
+</div>
 
 {% endblock %}

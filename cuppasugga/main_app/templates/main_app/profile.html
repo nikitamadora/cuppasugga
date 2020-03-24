@@ -2,16 +2,14 @@
 {% block content %}
 
 <section class="list-header">
-  <div class="container">
-    <h1 class="is-size-1 ">User Profile</h1>
-  </div>
+  <h1 class="is-size-1 ">User Profile</h1>
 </section>
 
 <div class="card card-pale" id="profile-header">
   <div class="card-content">
     <div class="is-size-2 is-capitalized">Hello, {{user.profile.user}}</div>
     <p>{{ user.profile.location}}</p>
-    <p>{{ user.profile.bio}}</>
+    <p>{{ user.profile.bio}}</p>
   </div>
   {% if user.is_authenticated %}
     <div class="buttons">
