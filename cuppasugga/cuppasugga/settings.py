@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
 ]
 
 # specify where successful logins should redirect to
-LOGIN_REDIRECT_URL = '/bags/'
+LOGIN_REDIRECT_URL = '/profile/'
 
 # specify where logging out redirects to
 LOGOUT_REDIRECT_URL = '/'

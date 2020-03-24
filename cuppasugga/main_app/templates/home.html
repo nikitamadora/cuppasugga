@@ -19,12 +19,12 @@
 
           <div id="recipient-hook" class="card-paler">
             <p class="has-text-grey">Need a little something from a neighbour?</p>
-            <button class="button is-primary" id="hook-view-all-btn">See Available Donations</button>
+            <a href="{% url 'public_index' %}" class="button is-primary" id="hook-view-all-btn">See Available Donations</a>
           </div>
 
           <div id="donor-hook" class="card-paler">
             <p class="has-text-grey">Have a little extra to share?</p>
-            <button class="button is-danger" id="hook-login-btn">Donate a Bag</button>
+            <a href="{% url 'login' %}" class="button is-danger" id="hook-login-btn">Donate a Bag</a>
           </div>
 
         </div>

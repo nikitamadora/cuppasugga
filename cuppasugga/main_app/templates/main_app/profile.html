@@ -13,9 +13,11 @@
     <p>{{ user.profile.location}}</p>
     <p>{{ user.profile.bio}}</>
   </div>
-  <div class="buttons">
-    <a class="button is-primary" href="{% url 'profile_update' user.id %}">Update Your Profile</a>
-  </div>
+  {% if user.is_authenticated %}
+    <div class="buttons">
+        <a class="button is-primary" href="{% url 'profile_update' user.id %}">Update</a>
+    </div> 
+  {% endif %}
 </div>
 
 <section class="container">
@@ -31,6 +33,7 @@
         <div class="card-content">
           <span class="card-title">{{bag.name}}</span>
         </div>
+
       </div>
     </a>
     {% empty %}
