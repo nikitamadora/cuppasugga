@@ -15,7 +15,7 @@ def signup(request):
             # user = form.save()
             form.save()
             # login(request, user)
-            return redirect('profile_create')
+            return render(request, 'main_app/profile.html')
         else:
             error_message = 'Invalid sign up - try again'
     form = UserCreateForm()
