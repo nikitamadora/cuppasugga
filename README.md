@@ -4,7 +4,8 @@
 <hr>
 
 ### WHAT IS THIS PROJECT?
-     This is a web application built with Django and Python. Users can create accounts to donate items to recipients.
+     This is a web application built with Django and Python. 
+     Users can create accounts to donate items to recipients.
 
 ![shipit](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/shipit.png)
 
@@ -15,21 +16,32 @@
 
 i. User would log into the app portal.
 
-ii. They would then be taken to their profile/details page. There they can view all the bags they have created and would also have the ability to create, update, or delete a bag.
+ii. They would then be taken to their profile/details page. There they can view 
+     all the bags they have created and would also have the ability to 
+     create, update, or delete a bag.
 
-iii. From the navigation bar, a user can select "available bags" to view an index of bags currently available on the platform.
+iii. From the navigation bar, a user can select "available bags" to view 
+     an index of bags currently available on the platform.
      
 ## User #1: 
      
-Single mom of two. Between balancing work and the closures of her kids' schools, by the time she made it to the grocery store, she couldn't find some items her family really needed. Things like rice, milk, peanut butter, tomato sauce and cleaning products. If only there were a way to ask her neighbors...
+Single mom of two. Between balancing work and the closures of her kids' schools, 
+     by the time she made it to the grocery store, she couldn't find some items 
+     her family really needed. Things like rice, milk, peanut butter, tomato 
+     sauce and cleaning products. If only there were a way to 
+     ask her neighbors...
      
 ## User #2: 
      
-A couple in their 30s with no kids. They realized they had some excess items they don't need and would like them to go to someone who needs them but don't know how to go about doing so...
+A couple in their 30s with no kids. They realized they had some excess items 
+     they don't need and would like them to go to someone who needs them but 
+     don't know how to go about doing so...
      
 ## User #3: 
      
-75 year old with diabetes, has been afraid to go out to get some items that he needs, especially toilet paper. He does have a ton of cans of tuna he'd be willing to trade.
+75 year old with diabetes, has been afraid to go out to get some items 
+     that he needs, especially toilet paper. He does have a ton of 
+     cans of tuna he'd be willing to trade.
 
 
 ### TECHNOLOGIES USED
@@ -50,14 +62,12 @@ A couple in their 30s with no kids. They realized they had some excess items the
           - Writing up user stories
 
 #### Responsive First
-     I approached the project with a <em>function first</em> mindset. I believe that, 
-     though design is fundamentally important, it doesn't matter how pretty an app is 
-     if it doesn't work. As such, I let the game look terrible until the functionality was 
-     sound, and then I put the graphics together during a polishing process on the last day. 
-     The result is a cute, playable game!
+     This project was designed with mobile users in mind. We chose Bulma
+          as our front-end framework to get us started, which allowed us
+          to get a user-friendly project off the ground quickly.
      
 #### Challenges and Triumphs
-##### Challenges First!
+##### Challenges
      - 
 
 ##### Triumphs!
