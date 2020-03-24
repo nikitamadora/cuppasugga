@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    <form action="" method="POST">
+<section class="container">
+  <div class="center-horizontal custom-form">
+    
+      <h1 class="is-size-1">Update Bag</h1>
+      <form method="POST" class="bag-form">
         {% csrf_token %}
         <table>
-            {{ form.as_table }}
+            {{ form.as_p }}
         </table>
-        <input type="submit" value="Submit" class="btn">
+        <input type="submit" value="Submit" class="btn button is-primary">
     </form>
+   
+  </div>
+</section>
 
 {% endblock %}
