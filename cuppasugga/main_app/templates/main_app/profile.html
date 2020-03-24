@@ -14,9 +14,11 @@
         <span>{{ user.profile.location}}</span>
         <span>{{ user.profile.bio}}</span>
     </div>
+    {% if user.is_authenticated %}
     <div class="card-action">
         <a href="{% url 'profile_update' user.id %}">Update</a>
-    </div>
+    </div> 
+    {% endif %}
 </div>
 
 <section class="container">
