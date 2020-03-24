@@ -2,34 +2,34 @@
 
 {% block content %}
 
-  <!-- Main -->
-  <main class="section">
-    <div class="columns is-vcentered" id="main-columns">
+<!-- Main -->
+<main class="section">
+  <div class="columns is-vcentered" id="main-columns">
 
-      <!-- Bag on Left -->
-      <div class="column has-text-right">
-        <div id="bag-image" class="is-hidden-mobile">
-          <img src="https://i.ibb.co/zx9zWMk/cs-bag.png" width="300" height="300" alt="cuppa sugga bag">
-        </div>
-      </div>
-
-      <!-- Text/Buttons on Right -->
-      <div class="column">
-        <div id="main-hooks">
-
-          <div id="recipient-hook" class="card-paler">
-            <p class="has-text-grey">Need a little something from a neighbour?</p>
-            <a href="{% url 'public_index' %}" class="button is-primary" id="hook-view-all-btn">See Available Donations</a>
-          </div>
-
-          <div id="donor-hook" class="card-paler">
-            <p class="has-text-grey">Have a little extra to share?</p>
-            <a href="{% url 'login' %}" class="button is-danger" id="hook-login-btn">Donate a Bag</a>
-          </div>
-
-        </div>
+    <!-- Bag on Left -->
+    <div class="column has-text-right">
+      <div id="bag-image" class="is-hidden-mobile">
+        <img src="https://i.ibb.co/zx9zWMk/cs-bag.png" width="300" height="300" alt="cuppa sugga bag">
       </div>
     </div>
-  </main>
+
+    <!-- Text/Buttons on Right -->
+    <div class="column">
+      <div id="main-hooks">
+
+        <div id="recipient-hook" class="card-paler">
+          <p class="has-text-grey">Need a little something from a neighbour?</p>
+          <a href="{% url 'public_index' %}" class="button is-primary" id="hook-view-all-btn">See Available Donations</a>
+        </div>
+
+        <div id="donor-hook" class="card-paler">
+          <p class="has-text-grey">Have a little extra to share?</p>
+          <a href="{% url 'login' %}" class="button is-danger" id="hook-login-btn">Donate a Bag</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
 
 {% endblock content %}

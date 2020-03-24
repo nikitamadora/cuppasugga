@@ -7,9 +7,9 @@
     <h4 class="is-size-5">Are you sure you want to delete?</h4>
 
     <form method="POST">
-        {% csrf_token %}
-        <input type="submit" value="I'm sure - Delete!" class="btn button is-danger">
-        <a href="{% url 'profile' %}" class="button is-outlined">Cancel</a>
+      {% csrf_token %}
+      <input type="submit" value="I'm sure - Delete!" class="btn button is-danger">
+      <a href="{% url 'profile' %}" class="button is-outlined">Cancel</a>
     </form>
   </div>
 </div>
