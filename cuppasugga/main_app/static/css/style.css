@@ -152,7 +152,9 @@ main header {
 }
 
 .bag-form label {
-  
+  display: block;
+  float: left;
+  width: 100px;
 }
 
 .bag-form input[type=text], 
