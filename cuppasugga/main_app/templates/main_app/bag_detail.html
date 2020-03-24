@@ -1,16 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<!-- Bag Header/Title -->
-<section class="list-header">
-  <div class="container">
-    <h1 class="is-size-1">{{bag.name}}</h1>
-  </div>
-</section>
-
 <!-- Bag & Bag Contents -->
-<div class="container">
-  <div class="card">
+<div class="columns is-centered">
+  <div class="column is-three-fifths">
+    <h2 class="is-size-2">{{bag.name}}</h2>
+  <div class="card card-pale">
     <div class="card-content">
       <span class="card-title is-size-5">This bag contains the following:</span>
       {% for item in bag.content %}
@@ -26,6 +21,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 {% endblock %}
