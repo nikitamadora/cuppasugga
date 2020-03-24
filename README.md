@@ -15,8 +15,7 @@
 
 i. User would log into the app portal.
 
-ii. They would then be taken to their profile/details page. 
-     a. There they can view all the bags they have created and would also have the ability to create, update, or delete a bag.
+ii. They would then be taken to their profile/details page. There they can view all the bags they have created and would also have the ability to create, update, or delete a bag.
 
 iii. From the navigation bar, a user can select "available bags" to view an index of bags currently available on the platform.
      
