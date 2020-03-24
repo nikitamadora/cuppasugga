@@ -3,14 +3,13 @@
 ### Version 1.0
 <hr>
 
+<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/cuppasugga-home.png" width="800">
 ### WHAT IS THIS PROJECT?
      This is a web application built with Django and Python. 
      Users can create accounts to donate items to recipients.
 
-![shipit](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/shipit.png)
-
-### WHY DID WE MAKE IT?
-     ...
+### WHO ARE WE & WHY DID WE MAKE IT?
+<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/cuppasugga-about.png" width="800">
 
 ### USER STORIES
 
@@ -68,6 +67,7 @@ A couple in their 30s with no kids. They realized they had some excess items
      
 #### Challenges and Triumphs
 ##### Challenges
+<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/django.png" width="800">
      - 
 
 ##### Triumphs!
@@ -90,9 +90,5 @@ A couple in their 30s with no kids. They realized they had some excess items
 Not applicable.
 
 ### WIREFRAMES
-#### Wireframe for the stubborn cats Rebrand
-![name of file](link.jpg)
-
-#### Original Wireframe
 
 ![name of file](link.jpg)
