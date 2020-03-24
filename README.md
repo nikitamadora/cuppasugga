@@ -4,7 +4,7 @@
 <hr>
 
 ### WHAT IS THIS PROJECT?
-     This is a...
+     This is a web application built with Django and Python. Users can create accounts to donate items to recipients.
 
 ![shipit](https://github.com/nikitamadora/stubborn-kittens/blob/master/assets/shipit.png)
 
@@ -14,25 +14,17 @@
 ### USER STORIES
 
 
-     i.        The user opens the game in their browser.
+     i.        User would log into the app portal.
 
-     ii.       The game deals seven cats to the player, which are visible at the bottom of the screen, 
-                    and places a [randomly generated] cat immediately into the box. The user compares 
-                    their cats against the one at the top of the box, looking for match against the 
-                    cat's **color** (pink, orange, goldenrod, green, blue, purple, biscuit, gray, or soot), 
-                    or the cat's **mood** (happy, angry, neutral, or sleeping).
+     ii.       They would then be taken to their profile/details page. There they can view all the bags they have created                        and would also have the ability to create, update, or delete a bag.
 
-     iii.      When the user clicks an cat that doesn't match, it shakes, then bounces back (happily). 
-                    The user then either selects an applicable cat, or else takes a new cat home by 
-                    clicking the "draw" button.
+     iii.      From the navigation bar, a user can select "available bags" to view an index of bags currently available on                       the platform.
 
-     iv.       When the user clicks a cat that matches, the cat enters the box and bounces (happily). 
-                    This triggers the computer's turn.
+               User #1: Single mom of two. Between balancing work and the closures of her kids' schools, by the time she                    made it to the grocery store, she couldn't find some items her family really needed. Things like rice, milk,                peanut butter, tomato sauce and cleaning products. If only there were a way to ask her neighbors...
 
-     v.        The user waits for the computer (neighbor) to select a cat. If the computer has 
-                    no valid (willing) cat, the computer is dealt a new cat.
+               User #2: A couple in their 30s with no kids. They realized they had some excess items they don't need and                    would like them to go to someone who needs them but don't know how to go about doing so...
 
-     vi.       After the computer takes a turn, the user and computer trade turns.
+               User #3: 75 year old with diabetes, has been afraid to go out to get some items that he needs, especially                    toilet paper. He does have a ton of cans of tuna he'd be willing to trade.
 
 
 ### TECHNOLOGIES USED
