@@ -76,7 +76,6 @@ A couple in their 30s with no kids. They realized they had some excess items
 ##### Triumphs!
      - Maintaining communication and collaboration througout planning and execution to successfully tie the front-end and back-end as smoothly as possible.
      - All three of us kept scope and the final project in mind in order to not only reach MVP, but create something we were proud of.
-     - 
 
 ### INSTALLATION INSTRUCTIONS
      Simply open the link in any modern browser! No special installation is required.
