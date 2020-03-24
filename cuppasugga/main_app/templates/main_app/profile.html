@@ -14,21 +14,19 @@
         <span>{{ user.profile.location}}</span>
         <span>{{ user.profile.bio}}</span>
     </div>
+    <div class="card-action">
+        <a href="{% url 'profile_update' user.id %}">Update</a>
+    </div>
 </div>
 
 <section class="container">
   {% for bag in bags %}
   <a href="{% url 'profile_bag_detail' user.id bag.id %}">
-      <div class="card">
-          <div class="card-content">
-              <span class="card-title">{{bag.name}}</span>
-              <p>{{ bag.content }}</p>
-          </div>
-          {% comment %} <div class="card-action">
-              <a href="{% url 'bags_update' user.id bag.id %}">Edit</a>
-              <a href="{% url 'toys_delete' toy.id %}">Delete</a>
-          </div> {% endcomment %}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{bag.name}}</span>
       </div>
+    </div>
   </a>
   {% empty %}
       <p>Sorry, you have no bags.</p>

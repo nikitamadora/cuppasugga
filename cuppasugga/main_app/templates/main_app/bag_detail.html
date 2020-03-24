@@ -13,7 +13,9 @@
   <div class="card">
     <div class="card-content">
       <span class="card-title is-size-5">This bag contains the following:</span>
-      <p>{{ bag.content }}</p>
+      {% for item in bag.content %}
+        <p>{{ item }}</p>
+      {% endfor %}
       <div class="buttons">
         <a href="{% url 'bags_update' user.id bag.id %}" class="button is-primary">
           <strong>Edit This Bag</strong>
