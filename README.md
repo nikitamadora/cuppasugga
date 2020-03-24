@@ -1,5 +1,5 @@
 # Cuppa Sugga
-## Subtitle
+## A Web App to Connect Quarantined Donors with People Who Need Things
 ### Version 1.0
 <hr>
 
@@ -53,6 +53,9 @@ A couple in their 30s with no kids. They realized they had some excess items
           - CSS
           - Visual Studio Code
           - Heroku
+          - Zoom
+          - BlueJeans
+          - Snap Camera (for keeping our collaboration light-hearted)
 
 
 ### APPROACH TAKEN
@@ -69,8 +72,15 @@ A couple in their 30s with no kids. They realized they had some excess items
 #### Challenges and Triumphs
 ##### Challenges
 <img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/django.png" width="800">
-     - Stripping Materialize from a previous application and researching new frameworks in a short amount of time to create a responsive and mobile friendly app posed unique challenges.
-     - Refactoring previous code, rethinking the ERD and setting up Model structure. The One-to-One relationship between the Django User Model and our Profile Model proved to be a lot of trial and error.
+     - This was each of our first foray into a purely remote collaboration format! With that,
+          though, came a strengthening of our ability to verbally build out a product, as well as
+          troubleshoot coding challenges. Pair programming became one of our greatest tools.
+     - Stripping Materialize from a previous application and researching 
+          new frameworks in a short amount of time to create a responsive and 
+          mobile friendly app posed unique challenges.
+     - Refactoring previous code, rethinking the ERD and setting up Model structure. 
+          The One-to-One relationship between the Django User Model and our Profile Model 
+          proved to be a lot of trial and error.
      - Dealing with Python's synchonicity -- how it affects user flow and creating work-arounds.
 
 ##### Triumphs!
@@ -96,5 +106,11 @@ A couple in their 30s with no kids. They realized they had some excess items
 Not applicable.
 
 ### WIREFRAMES
+<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-47.jpg" width="650">
 
-![name of file](link.jpg)
+<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-49.jpg" width="650">
+
+<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-50.jpg" width="650">
+
+<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-51.jpg" width="650">
+
