@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 
-# Create your views here.
 # user signup view
 def signup(request):
     error_message=''
@@ -54,7 +53,7 @@ def new_bag(request):
     context = { 'form': form }
     return render(request, 'bags/bag_form.html', context)
 
-# @login_required
+
 def public_bag_detail(request, bag_id):
     bag = Bag.objects.get(id=bag_id)
     donor = User.objects.get(id=bag.user.id)
