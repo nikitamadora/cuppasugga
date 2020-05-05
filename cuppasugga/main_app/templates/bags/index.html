@@ -9,15 +9,17 @@
 
 
 <div class="columns">
-  {% for bag in bags %}
-      <a href="{% url 'public_bag_detail' bag.id %}" class="column">
-        <div class="card card-pale">
-          <div class="card-content">
-            <span class="card-title">{{bag.name}}</span>
+  <div class="container bag-index">
+    {% for bag in bags %}
+        <a href="{% url 'public_bag_detail' bag.id %}" class="column is-4">
+          <div class="card card-pale">
+            <div class="card-content">
+              <span class="card-title">{{bag.name}}</span>
+            </div>
           </div>
-        </div>
-      </a>
-  {% endfor %}
+        </a>
+    {% endfor %}
+  </div>
 </div>
 
 {% endblock %}

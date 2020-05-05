@@ -14,6 +14,10 @@ main header {
   position: relative;
 }
 
+.columns, .bag-index {
+  flex-wrap: wrap;
+}
+
 .card {
   border-radius: 15px;
 }
