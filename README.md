@@ -52,7 +52,6 @@ A couple in their 30s with no kids. They realized they had some excess items
           - Bulma
           - CSS
           - Visual Studio Code
-          - Heroku
           - Zoom
           - BlueJeans
           - Snap Camera (for keeping our collaboration light-hearted)
@@ -94,6 +93,7 @@ A couple in their 30s with no kids. They realized they had some excess items
      - Currently, a user creates a bag and is redirected back to their Profile. We would have liked to redirect the user to the Bag Details page, but because of synchronicity, we were unable to (if we had time to create the Item Model, would have been able to error handle this)
 
 ### FUTURE RELEASE FEATURES
+     - Deploy to Heroku (or other)
      - Flesh out the Item Model 
      - Add Geolocation
      - Add a "trade/barter" feature
