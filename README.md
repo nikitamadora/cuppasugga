@@ -3,14 +3,14 @@
 ### Version 1.0
 <hr>
 
-<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/cuppasugga-home.png" width="800">
+<img src="https://github.com/nikitamadora/cuppasugga/blob/master/cuppasugga-home.png" width="800">
 
 ### WHAT IS THIS PROJECT?
      This is a web application built with Django and Python. 
      Users can create accounts to donate items to recipients.
 
 ### WHO ARE WE & WHY DID WE MAKE IT?
-<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/cuppasugga-about.png" width="800">
+<img src="https://github.com/nikitamadora/cuppasugga/blob/master/cuppasugga-about.png" width="800">
 
 ### USER STORIES
 
@@ -71,7 +71,7 @@ A couple in their 30s with no kids. They realized they had some excess items
      
 #### Challenges and Triumphs
 ##### Challenges
-<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/django.png" width="800">
+<img src="https://github.com/nikitamadora/cuppasugga/blob/master/django.png" width="800">
      - This was each of our first foray into a purely remote collaboration format! With that,
           though, came a strengthening of our ability to verbally build out a product, as well as
           troubleshoot coding challenges. Pair programming became one of our greatest tools.
@@ -106,11 +106,11 @@ A couple in their 30s with no kids. They realized they had some excess items
 Not applicable.
 
 ### WIREFRAMES
-<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-47.jpg" width="650">
+<img src="https://github.com/nikitamadora/cuppasugga/blob/master/projects-47.jpg" width="650">
 
-<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-49.jpg" width="650">
+<img src="https://github.com/nikitamadora/cuppasugga/blob/master/projects-49.jpg" width="650">
 
-<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-50.jpg" width="650">
+<img src="https://github.com/nikitamadora/cuppasugga/blob/master/projects-50.jpg" width="650">
 
-<img src="https://git.generalassemb.ly/kuricarino/cuppa-sugga/blob/master/projects-51.jpg" width="650">
+<img src="https://github.com/nikitamadora/cuppasugga/blob/master/projects-51.jpg" width="650">
 
