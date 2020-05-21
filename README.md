@@ -71,20 +71,27 @@ A couple in their 30s with no kids. They realized they had some excess items
 #### Challenges and Triumphs
 ##### Challenges
 <img src="https://github.com/nikitamadora/cuppasugga/blob/master/django.png" width="800">
-     - This was each of our first foray into a purely remote collaboration format! With that,
-          though, came a strengthening of our ability to verbally build out a product, as well as
-          troubleshoot coding challenges. Pair programming became one of our greatest tools.
+
+     - This was each of our first foray into a purely remote collaboration format! With that, 
+       though, came a strengthening of our ability to verbally build out a product, as well as
+       troubleshoot coding challenges. Pair programming became one of our greatest tools.
+
      - Stripping Materialize from a previous application and researching 
-          new frameworks in a short amount of time to create a responsive and 
-          mobile friendly app posed unique challenges.
+       new frameworks in a short amount of time to create a responsive and 
+       mobile friendly app posed unique challenges.
+          
      - Refactoring previous code, rethinking the ERD and setting up Model structure. 
-          The One-to-One relationship between the Django User Model and our Profile Model 
-          proved to be a lot of trial and error.
+       The One-to-One relationship between the Django User Model and our Profile Model 
+       proved to be a lot of trial and error.
+          
      - Dealing with Python's synchonicity -- how it affects user flow and creating work-arounds.
 
 ##### Triumphs!
-     - Maintaining communication and collaboration througout planning and execution to successfully tie the front-end and back-end as smoothly as possible.
-     - All three of us kept scope and the final project in mind in order to not only reach MVP, but create something we were proud of.
+     - Maintaining communication and collaboration througout planning and execution 
+       to successfully tie the front-end and back-end as smoothly as possible.
+     
+     - All three of us kept scope and the final project in mind in order to not only reach MVP, 
+       but create something we were proud of.
 
 ### INSTALLATION INSTRUCTIONS
      Simply open the link in any modern browser! No special installation is required.
